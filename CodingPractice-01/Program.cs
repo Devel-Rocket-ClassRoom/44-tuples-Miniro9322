@@ -5,8 +5,8 @@ using System;
 //1
 var bob = ("Bob", 23);
 
-Console.WriteLine(bob.Item1); // Bob
-Console.WriteLine(bob.Item2); // 23
+Console.WriteLine(bob.Item1);
+Console.WriteLine(bob.Item2);
 
 //2-1
 var numbers = (12, 34, 56);
