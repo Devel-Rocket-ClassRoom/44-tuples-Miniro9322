@@ -15,8 +15,8 @@ Console.WriteLine(t1.Equals(t3));
 var t4 = ("one", 1);
 var t5 = ("one", 1);
 
-Console.WriteLine(t1 == t4);
-Console.WriteLine(t1 != t5);
+Console.WriteLine(t4 == t5);
+Console.WriteLine(t4 != t5);
 
 //3
 (string name, int age) person1 = ("Alice", 25);
@@ -25,11 +25,11 @@ Console.WriteLine(t1 != t5);
 Console.WriteLine($"{person2.x}, {person2.y}");
 
 //4
-(string name, int age, char sex) bob1 = ("Bob", 23, 'M');
-(string age, int sex, char name) bob2 = bob1;
+(string name, int age, char gender) bob1 = ("Bob", 23, 'M');
+(string age, int gender, char name) bob2 = bob1;
 
 Console.WriteLine(bob2.age);
-Console.WriteLine(bob2.sex);
+Console.WriteLine(bob2.gender);
 Console.WriteLine(bob2.name);
 
 //5
