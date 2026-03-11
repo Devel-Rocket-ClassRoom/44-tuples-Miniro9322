@@ -34,8 +34,8 @@ Console.WriteLine($"최솟값: {result2.min}, 최댓값: {result2.max}");
 
 static (int min, int max) FindMinMax(int[] numbers)
 {
-    int min = numbers[0];
-    int max = numbers[0];
+    int min = int.MaxValue;
+    int max = int.MinValue;
 
     foreach (int num in numbers)
     {
@@ -63,9 +63,7 @@ var bob = ("Bob", 23);
 
 (string name, int age) = bob;
 
-Console.WriteLine($"이름: {name}");
-Console.WriteLine($"나이: {age}");
-
+Console.WriteLine($"이름: {name}\n나이: {age}");
 //7
 var (sum, count) = Tally2();
 Console.WriteLine($"Sum: {sum}, Count: {count}");
@@ -73,17 +71,17 @@ Console.WriteLine($"Sum: {sum}, Count: {count}");
 static (int Sum, int Count) Tally2() => (12, 3);
 
 //8
-string firstName = "";
-int userAge = 0;
+string name2 = "";
+int age2 = 0;
 
 var person = ("Alice", 30);
 
-(firstName, userAge) = person;
+(name2, age) = person;
 
-Console.WriteLine($"{firstName}, {userAge}");
+Console.WriteLine($"{name2}, {age2}");
 
 //9
-var (_, age2, _) = GetPerson();
-Console.WriteLine($"나이: {age2}");
+var (_, age3, _) = GetPerson();
+Console.WriteLine($"나이: {age3}");
 
 static (string name, int age, char gender) GetPerson() => ("Bob", 23, 'M');
